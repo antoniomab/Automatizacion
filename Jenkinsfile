@@ -1,13 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('Log tool version') {
-      steps {
-        sh '''docker version
-systeminfo'''
-      }
-    }
-
     stage('validate file') {
       steps {
         fileExists 'index.html'
